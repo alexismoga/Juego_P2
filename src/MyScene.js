@@ -20,9 +20,6 @@ class MyScene extends THREE.Scene {
     // Tendremos una cámara con un control de movimiento con el ratón
     this.createCamera (unRenderer);
     
-    // Un suelo 
-    this.createGround ();
-    
     // Y unos ejes. Imprescindibles para orientarnos sobre dónde están las cosas
     this.axis = new THREE.AxesHelper (5);
     this.add (this.axis);
@@ -134,8 +131,6 @@ class MyScene extends THREE.Scene {
     
     // Se actualiza la posición de la cámara según su controlador
     this.cameraControl.update();
-    this.model.rotation.y += 0.01;
-    this.model2.rotation.y += 0.02;
     // Se actualiza el resto del modelo
     this.model.update();
     this.model2.update();
